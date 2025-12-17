@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #e8e8e8;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(to right, #8b7355, #d4af37);
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.schedule-icon {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-info {
+    flex: 1;
+}
+
+.schedule-title {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.date-info {
+    background: #7a6348;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.week-info {
+    background: #d4af37;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 11px;
+    cursor: help;
+    white-space: nowrap;
+}
+
+.filters {
+    background: #6ba5d9;
+    padding: 15px;
+}
+
+.search-container {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+#searchButton {
+    width: 40px;
+    height: 36px;
+    background: #8b7355;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#searchButton:hover {
+    background: #7a6348;
+}
+
+.filter-row {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-item {
+    flex: 1;
+}
+
+.filter-item select {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    background: white;
+    cursor: pointer;
+}
+
+.filter-item.changed select {
+    background: #90EE90;
+    animation: highlight 0.5s ease;
+}
+
+@keyframes highlight {
+    0% { background: white; }
+    50% { background: #90EE90; }
+    100% { background: #90EE90; }
+}
+
+#scheduleList {
+    padding: 15px;
+}
+
+.schedule-item {
+    background: #8b7355;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.schedule-item-header {
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+}
+
+.day-label {
+    font-size: 13px;
+    min-width: 80px;
+}
+
+.pair-number {
+    font-size: 13px;
+    min-width: 130px;
+}
+
+.subject-name {
+    flex: 1;
+    font-size: 13px;
+}
+
+.teacher-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    text-align: right;
+    line-height: 1.3;
+}
+
+.expand-button {
+    background: #4a9d5f;
+    color: white;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding: 8px 0;
+}
+
+.schedule-item-details {
+    background: white;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    display: none;
+}
+
+.schedule-item.expanded .schedule-item-details {
+    display: block;
+}
+
+.schedule-item.expanded .expand-button {
+    background: #d9534f;
+}
+
+.details-row {
+    display: flex;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.details-label {
+    font-weight: bold;
+    min-width: 110px;
+    color: #666;
+}
+
+.details-value {
+    color: #333;
+}
+
+.loading {
+    text-align: center;
+    padding: 30px;
+    color: #999;
+    font-size: 14px;
+}
+
+.no-results {
+    text-align: center;
+    padding: 30px;
+    color: #999;
+    font-size: 14px;
+}
